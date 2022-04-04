@@ -215,7 +215,7 @@ function run_black() {
     if [[ "$FORCE_FORMAT" -ne 0 ]]; then
         black -q -l 100 "${PYTHON_FILES[@]}"
     else
-        black --check -l 100 "${PYTHON_FILES[@]}" | grep 'Oh no'
+        black -q --check -l 100 "${PYTHON_FILES[@]}"
     fi
 }
 
